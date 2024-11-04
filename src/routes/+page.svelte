@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    import Clock from "$lib/widget/Clock.svelte";
+    import BookmarkList from "$lib/home/BookmarkList.svelte";
+</script>
+
+<div class="w-full">
+    <Clock></Clock>
+    <BookmarkList></BookmarkList>
+</div>
