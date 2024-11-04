@@ -3,6 +3,6 @@
 </script>
 
 <div class="w-full">
-    Sorry ...
+    Sorry...
     <PendingModal></PendingModal>
 </div>
