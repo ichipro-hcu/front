@@ -68,6 +68,14 @@ const mainBookmark = [
     }
   ]
 
+  const externalServiceBookmark = [
+    {
+      name: "くるけん",
+      url: "https://kuruken.jp/",
+      icon: '/assets/external/kuruken.ico'
+    }
+  ]
+
   const accordions = [
     {
       emoji: '🏫',
@@ -87,7 +95,12 @@ const mainBookmark = [
     {
       emoji: '🔤',
       value: 'ぎゅっとe',
-      bookmarkList: gyuttoFuckBookmark
+      bookmarkList: gyuttoFuckBookmark,
+    },
+    {
+      emoji: '🧩',
+      value: '外部サービス',
+      bookmarkList: externalServiceBookmark,
     }
   ];
 
@@ -99,9 +112,9 @@ const mainBookmark = [
       <span slot="header">{ accordion.emoji } { accordion.value }</span>
       <div class="flex">
         {#each accordion.bookmarkList as i }
-          <Card class="w-4/12 text-center m-1" href={i.url}>
-            <img src={i.icon} alt="" srcset="" class="w-12 py-1 m-auto">
-            <span class="overflow-clip">{i.name}</span>
+          <Card class="w-4/12 text-center m-1 p-1" href={i.url}>
+            <img src={i.icon} alt="" srcset="" class="w-12 py-2 m-auto">
+            <span class="truncate">{i.name}</span>
           </Card>
         {/each}
       </div>
