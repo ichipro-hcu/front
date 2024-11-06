@@ -16,6 +16,11 @@ const mainBookmark = [
       name: 'UNIPA (SP)',
       url: 'https://ichipol.g.hiroshima-cu.ac.jp/uprx/MobileShibbolethAuthServlet',
       icon: '/assets/external/unipa.ico',
+    },
+    {
+      name: 'UniText',
+      url: 'https://app.d-text-service.jp/browser/start?uneidantai_ryakugo=MZ&soshiki_cd=hcity',
+      icon: '/assets/external/unitext.ico',
     }
   ];
 
@@ -68,6 +73,24 @@ const mainBookmark = [
     }
   ]
 
+  const lectureBookmark = [
+    {
+      name: "時間割・集中講義日程",
+      url: "https://www.hiroshima-cu.ac.jp/campuslife/c00025986/",
+      icon: "/assets/external/hcu.ico"
+    },
+    {
+      name: "教育課程・手引",
+      url: "https://www.hiroshima-cu.ac.jp/campuslife/c00032402/",
+      icon: "/assets/external/hcu.ico"
+    },
+    {
+      name: "授業カレンダー",
+      url: "https://www.hiroshima-cu.ac.jp/campuslife/c00048722/",
+      icon: "/assets/external/hcu.ico"
+    }
+  ]
+
   const externalServiceBookmark = [
     {
       name: "くるけん",
@@ -98,6 +121,11 @@ const mainBookmark = [
       bookmarkList: gyuttoFuckBookmark,
     },
     {
+      emoji: '✏️',
+      value: '履修関係',
+      bookmarkList: lectureBookmark
+    },
+    {
       emoji: '🧩',
       value: '外部サービス',
       bookmarkList: externalServiceBookmark,
@@ -110,10 +138,10 @@ const mainBookmark = [
   {#each accordions as accordion}
     <AccordionItem>
       <span slot="header">{ accordion.emoji } { accordion.value }</span>
-      <div class="flex">
+      <div class="flex overflow-scroll">
         {#each accordion.bookmarkList as i }
-          <Card class="w-4/12 text-center m-1 p-1" href={i.url}>
-            <img src={i.icon} alt="" srcset="" class="w-12 py-2 m-auto">
+          <Card class="w-4/12 max-w-sm text-center m-1 p-3" href={i.url}>
+            <img src={i.icon} alt="" srcset="" class="w-12 p-2 m-auto">
             <span class="truncate">{i.name}</span>
           </Card>
         {/each}
