@@ -138,9 +138,9 @@ const mainBookmark = [
   {#each accordions as accordion}
     <AccordionItem>
       <span slot="header">{ accordion.emoji } { accordion.value }</span>
-      <div class="flex overflow-scroll">
+      <div class="grid grid-cols-2 gap-3"> 
         {#each accordion.bookmarkList as i }
-          <Card class="w-4/12 max-w-sm text-center m-1 p-3" href={i.url}>
+          <Card class="w-full max-w-sm text-center" href={i.url}>
             <img src={i.icon} alt="" srcset="" class="w-12 p-2 m-auto">
             <span class="truncate">{i.name}</span>
           </Card>
