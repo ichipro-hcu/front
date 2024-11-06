@@ -136,7 +136,7 @@ const mainBookmark = [
 
 <Accordion class="py-3">
   {#each accordions as accordion}
-    <AccordionItem>
+    <AccordionItem transitionParams={{duration: 0}}>
       <span slot="header">{ accordion.emoji } { accordion.value }</span>
       <div class="grid grid-cols-2 gap-3"> 
         {#each accordion.bookmarkList as i }
