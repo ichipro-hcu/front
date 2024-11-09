@@ -29,12 +29,20 @@
           <Button class="w-full" on:click={() => (openLoginModalState = true)}>ログイン</Button>
         </div>
       {:then resolveData}
+        {#if resolveData["success"] == true}
         <Avatar size="lg" src={resolveData["result"]["AvatarURL"]}/>
         <h5 class="my-3 mb-1 text-xl font-medium text-gray-900 dark:text-white">{resolveData["result"]["ID"]}</h5>
         <span class="text-sm text-gray-500 dark:text-gray-400">{resolveData["result"]["Email"]}</span>
         <div class="flex mt-4 space-x-3 w-8/12 lg:mt-6">
           <Button class="w-full" on:click={() => (openLoginModalState = true)}>別のアカウントにログイン</Button>
         </div>
+        {:else}
+        <h5 class="my-3 mb-1 text-xl font-medium text-gray-900 dark:text-white">未ログイン</h5>
+        <span class="text-sm text-gray-500 dark:text-gray-400">ログインされていません</span>
+        <div class="flex mt-4 space-x-3 w-8/12 lg:mt-6">
+          <Button class="w-full" on:click={() => (openLoginModalState = true)}>ログイン</Button>
+        </div>
+        {/if}
       {:catch error}
         <Avatar size="lg" />
         <h5 class="my-3 mb-1 text-xl font-medium text-gray-900 dark:text-white">エラー</h5>
