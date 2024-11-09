@@ -1,8 +1,7 @@
 <script>
-    import PendingModal from "$lib/dialog/PendingModal.svelte";
+    import MyAccountCard from "$lib/widget/MyAccountCard.svelte";
 </script>
 
 <div class="w-full">
-    Sorry...
-    <PendingModal></PendingModal>
+    <MyAccountCard />
 </div>
