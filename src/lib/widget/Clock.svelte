@@ -1,17 +1,20 @@
 <script>
     import { onMount } from 'svelte';
     import { Card } from 'flowbite-svelte';
+  import { browser } from '$app/environment';
 
     let time = new Date();
 
     onMount(() => {
-        const interval = setInterval(() => {
-            time = new Date();
-        }, 1000);
+        if (browser) {
+            const interval = setInterval(() => {
+                time = new Date();
+            }, 1000);
 
-        return () => {
-            clearInterval(interval);
-        };
+            return () => {
+                clearInterval(interval);
+            };
+        }
     });
 </script>
 
