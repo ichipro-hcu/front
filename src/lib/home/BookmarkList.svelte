@@ -58,6 +58,11 @@ const mainBookmark = [
       url: 'https://triathlon.hiroshima-cu.ac.jp/',
       icon: '/assets/external/tri.ico',
     },
+    {
+      name: 'いちだいじ（施設故障報告）',
+      url:  'https://apps.powerapps.com/play/e/default-783175cd-00ad-4fa7-a1b0-2fea70d4a499/a/2b3b45fd-6223-4497-a57a-f30304092272?tenantId=783175cd-00ad-4fa7-a1b0-2fea70d4a499&hint=b1679929-402d-4f42-969d-3d99897b3ade&sourcetime=1717057976517&hidenavbar=true',
+      icon: '/assets/external/hcu.ico'
+    }
   ];
 
   const gyuttoFuckBookmark = [
@@ -96,6 +101,11 @@ const mainBookmark = [
       name: "くるけん",
       url: "https://kuruken.jp/",
       icon: '/assets/external/kuruken.ico'
+    },
+    {
+      name: 'いちぴろ・ポータルサイト',
+      url: 'https://portal-ichipiro-net.vercel.app/',
+      icon: '/assets/external/ie.jpg'
     }
   ]
 
