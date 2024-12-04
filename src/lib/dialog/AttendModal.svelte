@@ -41,6 +41,6 @@
     <p>UNIPA で「出席登録する」を押下するまで出席登録は完了していません。</p>
     <Button class="text-center w-full text-2xl" href="https://ichipol.g.hiroshima-cu.ac.jp/uprx/MobileShibbolethAuthServlet">出席登録</Button>
     <hr>
-    <p id="accessFromIndicator" class="safe">広島市立大学からアクセスされていま{userAccessfromUniv}<br />
+    <p id="accessFromIndicator" class="{accessFromClass}">広島市立大学からアクセスされていま{userAccessfromUniv}<br />
     Your IP Address: <span>{userAccessfrom?.result?.your_ip}</span></p>
 </Modal>
