@@ -103,8 +103,13 @@ const mainBookmark = [
       icon: '/assets/external/kuruken.ico'
     },
     {
-      name: 'いちぴろ・ポータルサイト',
-      url: 'https://portal-ichipiro-net.vercel.app/',
+      name: 'ichipiro+',
+      url: 'https://www.ichipiroplus.com/',
+      icon: '/assets/external/ie.jpg'
+    },
+    {
+      name: 'くるぴろ',
+      url: 'https://kurupiro.ichipiro.net/',
       icon: '/assets/external/ie.jpg'
     }
   ]
@@ -148,7 +153,7 @@ const mainBookmark = [
   {#each accordions as accordion}
     <AccordionItem transitionParams={{duration: 0}}>
       <span slot="header">{ accordion.emoji } { accordion.value }</span>
-      <div class="grid grid-cols-2 gap-3"> 
+      <div class="grid grid-cols-2 gap-3">
         {#each accordion.bookmarkList as i }
           <Card class="w-full max-w-sm text-center" href={i.url}>
             <img src={i.icon} alt="" srcset="" class="w-12 p-2 m-auto">
@@ -159,5 +164,3 @@ const mainBookmark = [
     </AccordionItem>
   {/each}
 </Accordion>
-
-
