@@ -67,13 +67,13 @@ const mainBookmark = [
 
   const gyuttoFuckBookmark = [
     {
-      name: "ぎゅっとeⅡ",
-      url: 'https://host.lang.hiroshima-cu.ac.jp/e-learning-2/',
+      name: "ぎゅっとeⅠ",
+      url: 'https://host.lang.hiroshima-cu.ac.jp/e-learning-1/',
       icon: '/assets/external/gyutto.ico'
     },
     {
-      name: "ぎゅっとeⅣ",
-      url: 'https://host.lang.hiroshima-cu.ac.jp/e-learning-4/',
+      name: "ぎゅっとeⅢ",
+      url: 'https://host.lang.hiroshima-cu.ac.jp/e-learning-3/',
       icon: '/assets/external/gyutto.ico'
     }
   ]

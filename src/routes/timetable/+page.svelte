@@ -10,7 +10,6 @@
     [false, false, false, false, false], // 5時限目
   ];
 
-  
 </script>
 
 <div class="w-full">
